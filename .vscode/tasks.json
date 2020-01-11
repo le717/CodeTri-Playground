@@ -1,0 +1,22 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build CSS",
+      "type": "shell",
+      "command": "npx tailwind build css/style.css -o css/output.css",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Start server",
+      "type": "shell",
+      "command": "python -m http.server --bind 127.0.0.1 717",
+      "problemMatcher": []
+    }
+  ]
+}
